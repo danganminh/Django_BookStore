@@ -1,0 +1,29 @@
+{% extends "_base.html" %}
+
+{% block title %}Books{% endblock title %}
+
+{% block content %}
+
+    <div class="container-booklist">
+        {% for book in book_list %}
+            <hr>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{{ book.cover.url }}" alt="Cover" width="200" height="300">
+                </div>
+
+                <div class="col-md-9">
+                    <h2>
+                        <a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a>
+                    </h2>
+
+                    <p>{{ book.author }}</p>
+
+                    <p>{{ book.price }}</p>
+                </div>
+
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock content %}

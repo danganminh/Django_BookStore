@@ -1,0 +1,28 @@
+1) Using crispy bootstrap 5 for layout
+2) Using django-allauth for User Registration
+
+
+Account:
+1) Admin
+username: dang
+password: 123
+email: dang@django.com
+
+Next step
+- Task 1
+    Create A Portfolio Resume in Home Page
+    # DONE!!!
+
+- Task 2
+    Custom Login Page and Signup Page
+    # Done with Login page: need learn more css/html, JS
+    # Done with Sign Up page
+    # Forget password, Forget password done
+	# DONE!!!
+
+- Task 3
+    Custom List Books Page
+    # DONE!!!
+
+- Task 4
+	Add Cart, and Oder in book ...Example

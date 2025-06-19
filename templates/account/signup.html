@@ -1,0 +1,61 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block content %}
+    {% comment %} <h2>Sign Up</h2>
+    <form method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn btn-success" type="submit">Sign Up</button>
+    </form> {% endcomment %}
+
+    <div id="account-wrapper">
+        <div class="action_account">
+            <h1 class="text-center">Sign Up!</h1>
+            <br>
+            <form method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}  
+
+                {% if form.errors %}
+                    <div class="alert alert-danger">
+                        <strong>Error:</strong> Somethings wrong, please try again!
+                    </div>
+                {% endif %}
+
+                <div class="mb-3">
+                    <label class="form-label">User Name</label>
+                    <input type="text" name="username" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3 position-relative">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password1" id="password1" class="form-control" required>
+                </div>
+                <ul>
+                    <li>Your password can’t be too similar to your other personal information.</li>
+                    <li>Your password must contain at least 8 characters.</li>
+                    <li>Your password can’t be a commonly used password.</li>
+                    <li>Your password can’t be entirely numeric.</li>
+                </ul>
+
+                <div class="mb-3 position-relative">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password" name="password2" id="password2" class="form-control" required>
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+{% endblock content %}

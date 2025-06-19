@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <div class="container-homepage">
+        <div class="row">
+            
+            <div class="col-md-3">
+                <div class="card card-body h-100 border-info" id="profile-wrapper">
+                    <img id="profile-pic" src="{% static 'images/avatar.jpg' %}">
+                    <hr>
+                    <h4>Hi I'm Dang</h4>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card card-body h-100 border-info">
+                    <h4>This is My First Website</h4>
+                    <hr>
+                    <p>Now I learn Django because I'm have a lot of free times.</p>
+
+                    <p>I will create I website for anybody want to sell books and anybody want to buy a book.</p>
+
+                    <p>The page would works like a social media, you have a account and you can sell or buy a books 
+                        you can like and comment with another book.</p>
+
+                    <p>You can know how many people like, buy, see your post.</p>
+
+                    <h3>Have a good time to enjoy it!</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
